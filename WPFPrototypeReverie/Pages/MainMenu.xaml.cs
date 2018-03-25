@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace WPFPrototypeReverie.Pages
+﻿namespace WPFPrototypeReverie.Pages
 {
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Navigation;
     /// <summary>
-    /// Interaction logic for MainMenu.xaml
+    /// There is a little bit of blitting after the splash screen but it doesn't matter, i think
+    /// it's fine, this is a proto / proof anyway
     /// </summary>
     public partial class MainMenu : Page
     {
@@ -26,7 +15,7 @@ namespace WPFPrototypeReverie.Pages
             ShowsNavigationUI = false;
         }
 
-        private void StartGameButton_Click(object sender, RoutedEventArgs e)
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
         {
             TestScene page = new TestScene();
             NavigationService.Navigate(page);

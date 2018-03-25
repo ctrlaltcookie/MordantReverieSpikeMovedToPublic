@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Windows.Navigation;
-
-namespace WPFPrototypeReverie
+﻿namespace WPFPrototypeReverie
 {
+    using System.Windows.Navigation;
+
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// // derp herp this is the main window that basically doesn't actually do anything at all, it's
+    /// // just a nav really, but it is a good place to instantiate things that need to be used
+    /// // globally, YEAH I KNOW GLOBALS ARE BAD BUT ITS A GAME FUCK OFF
     /// </summary>
     public partial class MainWindow : NavigationWindow
     {

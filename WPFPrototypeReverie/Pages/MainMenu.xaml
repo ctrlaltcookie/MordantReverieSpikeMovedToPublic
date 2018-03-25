@@ -7,6 +7,6 @@
       Title="MainMenu" Height="720" Width="1280">
 
     <Grid Background="#FFA28888">
-        <Button x:Name="StartGameButton" Content="Start Game" HorizontalAlignment="Left" Margin="578,358,0,0" VerticalAlignment="Top" Width="159" Height="52" Click="StartGameButton_Click"/>
+        <Button x:Name="NewGameButton" Content="New Game" HorizontalAlignment="Left" Margin="578,284,0,0" VerticalAlignment="Top" Width="159" Height="52" Click="NewGameButton_Click"/>
     </Grid>
 </Page>
