@@ -1,10 +1,7 @@
-﻿using System;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows;
-using System.Windows.Threading;
 using System.Windows.Media;
 using System.Media;
-using System.Windows.Media.Animation;
 using System.Collections.Generic;
 using WPFPrototypeReverie.Libraries;
 
@@ -15,10 +12,12 @@ namespace WPFPrototypeReverie
     /// </summary>
     public partial class TestScene : Page
     {
+        GameProgressTracker _progressTracker;
 
-        public TestScene()
+        public TestScene(GameProgressTracker progressTracker)
         {
             InitializeComponent();
+            _progressTracker = progressTracker;
             TestText.Visibility = Visibility.Collapsed;
 
             TestText.Visibility = Visibility.Visible;
@@ -40,11 +39,14 @@ namespace WPFPrototypeReverie
             SoundPlayer player = new SoundPlayer(@"C:\Users\Jack\source\repos\WPFPrototypeReverie\wowActingWow.wav");
             player.Load();
             player.Play();
+            
         }
 
         private void NextLabel_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            TestScene2 page = new TestScene2();
+            TestScene2 page = new TestScene2(_progressTracker);
+            _progressTracker.MarkSceneViewed("scene1");
+            _progressTracker.SaveGame();
             NavigationService.Navigate(page);
         }
     }

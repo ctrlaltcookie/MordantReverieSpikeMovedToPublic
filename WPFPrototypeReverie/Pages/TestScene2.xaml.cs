@@ -3,8 +3,6 @@ using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Threading;
 using System.Windows.Media;
-using System.Media;
-using System.Windows.Media.Animation;
 using System.Collections.Generic;
 using WPFPrototypeReverie.Libraries;
 
@@ -16,10 +14,12 @@ namespace WPFPrototypeReverie
     public partial class TestScene2 : Page
     {
         MediaPlayer player;
+        GameProgressTracker _progressTracker;
 
-        public TestScene2()
+        public TestScene2(GameProgressTracker progressTracker)
         {
             InitializeComponent();
+            _progressTracker = progressTracker;
             TestText.Visibility = Visibility.Collapsed;
             TestText.Visibility = Visibility.Visible;
             TestText.Foreground = Brushes.WhiteSmoke;

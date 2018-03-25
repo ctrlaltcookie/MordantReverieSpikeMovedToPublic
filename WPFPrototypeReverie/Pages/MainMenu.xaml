@@ -8,5 +8,6 @@
 
     <Grid Background="#FFA28888" Margin="0,0,0,-74">
         <Button x:Name="NewGameButton" Content="New Game" HorizontalAlignment="Left" Margin="578,284,0,0" VerticalAlignment="Top" Width="159" Height="52" Click="NewGameButton_Click"/>
+        <Button x:Name="ContinueButton" Content="Continue" HorizontalAlignment="Left" Margin="578,211,0,0" VerticalAlignment="Top" Width="159" Height="52" Click="ContinueButton_Click"/>
     </Grid>
 </Page>
