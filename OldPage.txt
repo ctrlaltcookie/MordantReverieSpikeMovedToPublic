@@ -1,0 +1,97 @@
+namespace WPFPrototypeReverie    
+{
+    using System;
+    using System.Threading;
+    using System.Windows;
+    using System.Windows.Media;
+    using System.Windows.Media.Imaging;
+    using System.Windows.Navigation;
+
+    //this is a containment trick :) a lot of old heads will tell you it's stupid but it's not it's awesome
+
+    /* this is going a lot better than i thought it would, legit never used wpf before, i honestly was told it was ass lol, it looks better than forms !!
+     * this is total sex, i love that this work fast without jitter
+     * 
+     */
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : NavigationWindow
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+            //hide the buttons so that we can play an animation or some shit
+            HideButtons();
+        }
+
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+            //when the content is rendered, sleep a bit so that we can play an animation and shit
+
+            Thread.Sleep(1000); // a one second splash screen of fucking potatos lol
+
+            //after the animation and shit, lets change the pictuer and paint the new controls
+
+            ImageBrush backgroundBrush = new ImageBrush();
+
+            backgroundBrush.ImageSource = new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), @"C:\Users\Jack\source\repos\WPFPrototypeReverie\Bubble.jpg"));
+            Background = backgroundBrush;
+            Gridr.Background = backgroundBrush;
+
+            //I want a small pause before showing the buttons but this can be figured out later
+            //Thread.Sleep(200);
+            //hmmmmmm i'll need to figure this out later tbh
+
+            ShowButtons();
+            // name the fucking grid jackass
+            //NOIIICE
+        }
+
+        private void NewGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            // this needs to start a new game, with a new background and play music and shit so that's gonna be fun, i should turn off the loop i have going in the background.
+            // you haven't heard the music up till now i've been skipping it out because it's copyright, so we are going to need to make some music for this. luckily i have some loops
+            // preprepaird :) #i mean my voice
+            HideButtons();
+            SillyVoiceActingScene();
+        }
+
+        private void SillyVoiceActingScene()
+        {
+            //scripty
+            //well this is a piece of voice acting wow, look at the voice and the acting, wow // bit lost
+            
+        }
+
+        private void ContinueButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LoadGameButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void QuitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void HideButtons()
+        {
+            ContinueButton.Visibility = Visibility.Collapsed;
+            NewGameButton.Visibility = Visibility.Collapsed;
+            LoadGameButton.Visibility = Visibility.Collapsed;
+            QuitButton.Visibility = Visibility.Collapsed;
+        }
+
+        private void ShowButtons()
+        {
+            NewGameButton.Visibility = Visibility.Visible;
+            LoadGameButton.Visibility = Visibility.Visible;
+            QuitButton.Visibility = Visibility.Visible;
+        }
+    }
+}
