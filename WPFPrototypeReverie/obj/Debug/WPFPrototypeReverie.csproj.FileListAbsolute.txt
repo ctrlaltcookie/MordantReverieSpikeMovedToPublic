@@ -16,3 +16,5 @@ c:\users\jack\source\repos\WPFPrototypeReverie\WPFPrototypeReverie\obj\Debug\Pag
 c:\users\jack\source\repos\WPFPrototypeReverie\WPFPrototypeReverie\obj\Debug\Pages\TestScene.baml
 c:\users\jack\source\repos\WPFPrototypeReverie\WPFPrototypeReverie\obj\Debug\Pages\MainMenu.baml
 c:\users\jack\source\repos\WPFPrototypeReverie\WPFPrototypeReverie\obj\Debug\Pages\MainMenu.g.cs
+C:\Users\Jack\source\repos\WPFPrototypeReverie\WPFPrototypeReverie\obj\Debug\Pages\TestScene2.baml
+C:\Users\Jack\source\repos\WPFPrototypeReverie\WPFPrototypeReverie\obj\Debug\Pages\TestScene2.g.cs

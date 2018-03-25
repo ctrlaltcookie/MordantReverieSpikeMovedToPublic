@@ -6,7 +6,7 @@
       mc:Ignorable="d"
       Title="MainMenu" Height="720" Width="1280">
 
-    <Grid Background="#FFA28888">
+    <Grid Background="#FFA28888" Margin="0,0,0,-74">
         <Button x:Name="NewGameButton" Content="New Game" HorizontalAlignment="Left" Margin="578,284,0,0" VerticalAlignment="Top" Width="159" Height="52" Click="NewGameButton_Click"/>
     </Grid>
 </Page>
