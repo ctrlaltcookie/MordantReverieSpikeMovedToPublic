@@ -9,10 +9,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Jack\source\repos\WPFPrototypeReverie\Taters.jpg"/>
         </Grid.Background>
+        <Image x:Name="Cougher" HorizontalAlignment="Left" Height="318" Margin="65,393,0,0" VerticalAlignment="Top" Width="254" Source="C:\Users\Jack\source\repos\WPFPrototypeReverie\really.png"/>
         <TextBlock x:Name="TestText" HorizontalAlignment="Left" Height="620" Margin="36,38,0,0" TextWrapping="Wrap" 
-                   Text="" VerticalAlignment="Top" Width="1204" Background="#B9292727" FontSize="18" 
-                   FontFamily="Open Sans SemiBold" Padding="8,2">
-        </TextBlock>
+                   VerticalAlignment="Top" Width="1204" Background="#B9292727" FontSize="18" 
+                   FontFamily="Open Sans SemiBold" Padding="8,2"><InlineUIContainer>
+                <Image Height="100" Width="100"/>
+            </InlineUIContainer></TextBlock>
         <Label x:Name="NextLabel" Content="Click for the next page" HorizontalAlignment="Left" Margin="1047,676,0,0" 
             VerticalAlignment="Top" Width="223" FontSize="18"  FontFamily="Open Sans SemiBold" MouseLeftButtonUp="NextLabel_MouseLeftButtonUp"/>
     </Grid>

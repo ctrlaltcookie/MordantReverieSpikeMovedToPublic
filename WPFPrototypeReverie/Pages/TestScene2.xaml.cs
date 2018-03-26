@@ -20,7 +20,7 @@ namespace WPFPrototypeReverie
         {
             InitializeComponent();
             _progressTracker = progressTracker;
-            TestText.Visibility = Visibility.Collapsed;
+            Cougher.Visibility = Visibility.Collapsed;
             TestText.Visibility = Visibility.Visible;
             TestText.Foreground = Brushes.WhiteSmoke;
             string dialogue = "\"Unspoken dialogue of a differnet " +
@@ -66,7 +66,7 @@ namespace WPFPrototypeReverie
         {
             DispatcherTimer timer = new DispatcherTimer
             {
-                Interval = new TimeSpan(0, 0, 5)
+                Interval = new TimeSpan(0, 0, 6)
             };
             timer.Tick += (sender, e) => SpecialEffect_Tick(sender, e, path);
             timer.Start();
@@ -78,6 +78,7 @@ namespace WPFPrototypeReverie
             MediaPlayer cough = new MediaPlayer();
             cough.Open(new Uri(path));
             cough.Play();
+            Cougher.Visibility = Visibility.Visible;
             timer.Stop();
         }
     }
